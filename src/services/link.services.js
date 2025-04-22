@@ -1,5 +1,5 @@
-const LinkModel = require("../model/link.modelo");
 const { nanoid } = require("nanoid");
+const LinkModel = require("../model/link.model");
 
 
 const crearLinkAcortadoDB = async(originalUrl)=>{
