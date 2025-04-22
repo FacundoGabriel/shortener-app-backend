@@ -6,7 +6,7 @@ const port = 3005
 const cors = require('cors');
 
 app.use(cors({
-    origin: 'http://localhost:5173'
+    origin: 'https://shortener-2025.netlify.app'
 }));
   
 app.use(express.json())
@@ -14,6 +14,6 @@ app.use(express.json())
 app.use('/link', require('./routes/link.routes'))
 
 
-    app.listen(port, () => {
-        console.log('servidor andando en el port', port)
-    })
+app.listen(port, () => {
+    console.log('servidor andando en el port', port)
+ })
