@@ -13,7 +13,7 @@ const crearLinkAcortadoDB = async(originalUrl)=>{
         }
     
         const shortCode = nanoid(4);
-        const shortUrl = `http://localhost:3004/link/${shortCode}`; 
+        const shortUrl = `${process.env.BACKEND_URL}/link/${shortCode}`;
     
         const linkGenerado = new LinkModel({
             originalUrl,
