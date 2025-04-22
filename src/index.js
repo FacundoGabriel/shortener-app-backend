@@ -1,9 +1,19 @@
+require('./db/config.db')
 const express = require('express')
 const app = express()
 const port = 3005
 
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'http://localhost:5173'
+}));
+  
 app.use(express.json())
 
-app.listen(port, () => {
-    console.log('servidor andando en el port', port)
-})
+app.use('/link', require('./routes/link.routes'))
+
+
+    app.listen(port, () => {
+        console.log('servidor andando en el port', port)
+    })
